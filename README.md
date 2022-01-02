@@ -116,7 +116,7 @@ Key: foods01, Message: b'{"payload": "pasta 9"}'
 ### Deleting topics
 
 ```
-$ pipenv run python delete.py --async
+$ pipenv run python kDeleteTopics.py --topics foods
 ```
 
 ### Delete the Kafka Envrionment
