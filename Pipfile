@@ -9,6 +9,7 @@ argparse = "*"
 
 [dev-packages]
 black = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.9"

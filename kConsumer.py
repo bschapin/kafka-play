@@ -7,7 +7,8 @@ running = True
 
 
 def msg_process(msg):
-    print(f"Key: {msg.topic()}{msg.partition()}{msg.offset()}, Message: {msg.value()}")
+    print(
+        f"Key: {msg.topic()}{msg.partition()}{msg.offset()}, Message: {msg.value()}")
 
 
 def basic_consume_loop(consumer, topics):
@@ -73,7 +74,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--topics",
-        help="message topic",
+        help="message topics",
         required=True,
         action="extend",
         nargs="+",
