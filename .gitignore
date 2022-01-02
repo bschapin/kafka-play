@@ -28,7 +28,6 @@
 ######################
 __pycache__/
 *.py[cod]
-Pipfile.lock
 
 # Logs and databases #
 ######################
