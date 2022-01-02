@@ -34,23 +34,24 @@ $ pipenv --venv
 You can check available options from the command line of each program
 
 ```
-$ pipenv run python Consumer.py -h
+$ pipenv run python kCreateTopics.py -h
 ```
 
 **Example Output**
 
 ```
-usage: kConsumer.py [-h] --topics TOPICS [TOPICS ...] group
+usage: kCreateTopics.py [-h] --topics TOPICS [TOPICS ...] [--partitions PARTITIONS] [--replication REPLICATION]
 
-Consume records from Kafka
-
-positional arguments:
-  group                 consumer group
+Create a Kafka topic
 
 optional arguments:
   -h, --help            show this help message and exit
   --topics TOPICS [TOPICS ...]
                         message topics
+  --partitions PARTITIONS
+                        number of topic partitions
+  --replication REPLICATION
+                        replication factor
 ```
 
 pipenv install
