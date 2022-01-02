@@ -54,11 +54,6 @@ optional arguments:
                         replication factor
 ```
 
-pipenv install
-pipenv run python kTopics.py --topics foods --partitions 3
-pipenv run python kConsumer.py foo --topics foods  
-pipenv run python kProducer.py --iter 10 --topic foods --message pasta
-
 ## Running
 
 ### Start Kafka Envrionment with Docker
