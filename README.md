@@ -71,22 +71,32 @@ $ pipenv run python kCreateTopics.py --topics foods --partitions 3
 ### Creating records
 
 ```
-$ pipenv run python kProducer.py --iter 5 --topic foods --message pasta
+$ pipenv run python kProducer.py --iter 10 --topic foods --message pasta
 ```
 
 #### Example
 
 ```
-Message produced: <cimpl.Message object at 0x107bff840>
-Latency: 0.021008, Key: b'0', Topic: foods, Partition: 2, Offset: 0, Timestamp: (1, 1641162357127)
-Message produced: <cimpl.Message object at 0x107bff840>
-Latency: 0.013018, Key: b'1', Topic: foods, Partition: 2, Offset: 1, Timestamp: (1, 1641162357148)
-Message produced: <cimpl.Message object at 0x107bff840>
-Latency: 0.012084, Key: b'2', Topic: foods, Partition: 1, Offset: 0, Timestamp: (1, 1641162357161)
-Message produced: <cimpl.Message object at 0x107bff840>
-Latency: 0.010742, Key: b'3', Topic: foods, Partition: 1, Offset: 1, Timestamp: (1, 1641162357173)
-Message produced: <cimpl.Message object at 0x107bff840>
-Latency: 0.01279, Key: b'4', Topic: foods, Partition: 1, Offset: 2, Timestamp: (1, 1641162357184)
+Message produced: b'{"payload": "pasta 0"}'
+Latency: 0.169476, Key: b'0', Topic: foods, Partition: 2, Offset: 0, Timestamp: (1, 1641739782413)
+Message produced: b'{"payload": "pasta 1"}'
+Latency: 0.014274, Key: b'1', Topic: foods, Partition: 2, Offset: 1, Timestamp: (1, 1641739782584)
+Message produced: b'{"payload": "pasta 2"}'
+Latency: 0.015411, Key: b'2', Topic: foods, Partition: 1, Offset: 0, Timestamp: (1, 1641739782598)
+Message produced: b'{"payload": "pasta 3"}'
+Latency: 0.014647, Key: b'3', Topic: foods, Partition: 1, Offset: 1, Timestamp: (1, 1641739782614)
+Message produced: b'{"payload": "pasta 4"}'
+Latency: 0.013603, Key: b'4', Topic: foods, Partition: 1, Offset: 2, Timestamp: (1, 1641739782628)
+Message produced: b'{"payload": "pasta 5"}'
+Latency: 0.014312, Key: b'5', Topic: foods, Partition: 1, Offset: 3, Timestamp: (1, 1641739782642)
+Message produced: b'{"payload": "pasta 6"}'
+Latency: 0.013867, Key: b'6', Topic: foods, Partition: 1, Offset: 4, Timestamp: (1, 1641739782656)
+Message produced: b'{"payload": "pasta 7"}'
+Latency: 0.016914, Key: b'7', Topic: foods, Partition: 0, Offset: 0, Timestamp: (1, 1641739782670)
+Message produced: b'{"payload": "pasta 8"}'
+Latency: 0.013953, Key: b'8', Topic: foods, Partition: 2, Offset: 2, Timestamp: (1, 1641739782687)
+Message produced: b'{"payload": "pasta 9"}'
+Latency: 0.014061, Key: b'9', Topic: foods, Partition: 0, Offset: 1, Timestamp: (1, 1641739782702)
 Flushing records...
 ```
 
@@ -101,13 +111,13 @@ $ pipenv run python kConsumer.py foo --topics foods
 ```
 Key: foods20, Message: b'{"payload": "pasta 0"}'
 Key: foods21, Message: b'{"payload": "pasta 1"}'
+Key: foods22, Message: b'{"payload": "pasta 8"}'
 Key: foods10, Message: b'{"payload": "pasta 2"}'
 Key: foods11, Message: b'{"payload": "pasta 3"}'
 Key: foods12, Message: b'{"payload": "pasta 4"}'
 Key: foods13, Message: b'{"payload": "pasta 5"}'
 Key: foods14, Message: b'{"payload": "pasta 6"}'
 Key: foods00, Message: b'{"payload": "pasta 7"}'
-Key: foods22, Message: b'{"payload": "pasta 8"}'
 Key: foods01, Message: b'{"payload": "pasta 9"}'
 ```
 

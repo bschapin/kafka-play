@@ -8,7 +8,7 @@ def acked(err, msg):
     if err is not None:
         print("Failed to deliver message: %s: %s" % (str(msg), str(err)))
     else:
-        print("Message produced: %s" % (str(msg)))
+        print("Message produced: %s" % (str(msg.value())))
         print(
             f"Latency: {msg.latency()}, Key: {msg.key()}, Topic: {msg.topic()}, Partition: {msg.partition()}, Offset: {msg.offset()}, Timestamp: {msg.timestamp()}"
         )

@@ -17,8 +17,6 @@ def main():
 
     admin = AdminClient(conf)
 
-    # delete_topics = [DeleteTopics(topic) for topic in args.topics]
-
     # Call delete_topics to asynchronously delete topics. A dict
     # of <topic,future> is returned.
     fs = admin.delete_topics(args.topics)
@@ -34,7 +32,7 @@ def main():
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description="Create a Kafka topic")
+    parser = argparse.ArgumentParser(description="Delete Kafka topics")
 
     parser.add_argument(
         "--topics",
@@ -43,20 +41,6 @@ if __name__ == "__main__":
         action="extend",
         nargs="+",
         type=str,
-    )
-    parser.add_argument(
-        "--partitions",
-        help="number of topic partitions",
-        required=False,
-        default=1,
-        type=int,
-    )
-    parser.add_argument(
-        "--replication",
-        help="replication factor",
-        required=False,
-        default=1,
-        type=int,
     )
 
     args = parser.parse_args()
